@@ -62,6 +62,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  font-family: 'Poppins';
 }
 .countdown-card {
   min-width: 420px;
@@ -74,44 +75,45 @@ export default {
   text-align: center;
 }
 .days-count {
-  font-size: 8.5rem;
-  font-weight: 900;
+  font-size: 4.5rem;
+  font-weight: 600;
   color: #ffffff;
   letter-spacing: -2px;
   line-height: 1;
 }
 .hours-count {
-  font-size: 6.5rem;
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: -2px;
-  line-height: 2;
-}
-.minutes-count {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 500;
   color: #ffffff;
   letter-spacing: -2px;
   line-height: 2;
 }
-.count-label {
-  margin-top: 0.6rem;
-  font-size: 1.4rem;
-  color: rgba(255,255,255,0.9);
+.minutes-count {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: -2px;
+  line-height: 1;
 }
 
 @media (max-width: 1200px) {
-  .days-count { font-size: 7rem; }
+  .days-count { font-size: 4rem; }
+  .hours-count { font-size: 3.5rem; }
+  .minutes-count { font-size: 3rem; }
   .countdown-card { padding: 3.2rem 3.6rem; min-width: 360px; }
 }
 
 @media (max-width: 768px) {
-  .days-count { font-size: 5.2rem; }
+  .days-count { font-size: 3.4rem; }
+  .hours-count { font-size: 3.0rem; }
+  .minutes-count { font-size: 2.6rem; }
   .countdown-card { padding: 2.6rem 2.8rem; min-width: 300px; }
 }
 
 @media (max-width: 420px) {
-  .days-count { font-size: 3.8rem; }
+  .days-count { font-size: 3.2rem; }
+  .hours-count { font-size: 2.4rem; }
+  .minutes-count { font-size: 1.6rem; }
   .countdown-card { padding: 1.6rem 1.8rem; min-width: 220px; }
 }
 </style>

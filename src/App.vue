@@ -11,7 +11,9 @@ export default {
 
 <template>
   <div id="app">
+      <div class="title"> Wesele Klaudii i Radka za: </div>
       <Countdown target="2026-05-30T15:00:00" />
+      <div class="title"> Więcej informacji w styczniu </div>
   </div>
 </template>
 
@@ -37,5 +39,14 @@ iframe {
   border: none;
   border-radius: 8px;
   max-width: 100%;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #ffffffff;
+  letter-spacing: -2px;
+  line-height: 1;
+  font-family: 'Playfair Display', serif;
 }
 </style>
