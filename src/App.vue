@@ -1,29 +1,17 @@
 <script>
-import Logo from './components/Logo.vue'
-import Navbar from './components/Navbar.vue'
-import Church from './components/Church.vue'
-import WeddingHall from './components/WeddingHall.vue'
+import Countdown from './components/Countdown.vue'
 
 export default {
   name: 'App',
   components: {
-    Logo,
-    Navbar,
-    Church,
-    WeddingHall
+    Countdown
   }
 }
 </script>
 
 <template>
   <div id="app">
-    <Logo />
-    <Navbar />
-    <Church />
-    <WeddingHall />
-    <footer>
-      <p>&copy; 2025 My Vue Site</p>
-    </footer>
+      <Countdown target="2026-05-30T15:00:00" />
   </div>
 </template>
 
@@ -34,7 +22,7 @@ body {
 }
 
 footer {
-  background-color: #2c3e50;
+  background-color: #305a84ff;
   color: white;
   text-align: center;
   padding: 20px;
