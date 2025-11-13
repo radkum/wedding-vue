@@ -4,7 +4,7 @@
   font-weight: 400;
   color-scheme: light dark;
   color: #ffffffde;
-  background-color: #6b152d;
+  /* background-image removed from :root */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -30,9 +30,10 @@ body {
   min-width: 0;
   min-height: 100vh;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("/src/assets/1.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
   overflow-x: hidden;
 }
 

@@ -18,16 +18,12 @@ export default {
 </template>
 
 <style scoped>
-body {
-  font-family: sans-serif;
-  margin: 0;
+#app{
+  margin-top: 5rem;
+  font-family: "Ink Free", cursive;
 }
-
-footer {
-  background-color: #305a84ff;
-  color: white;
-  text-align: center;
-  padding: 20px;
+body {
+  margin: 0;
 }
 
 .map-container {
@@ -44,9 +40,9 @@ iframe {
 .title {
   font-size: 3.5rem;
   font-weight: 400;
-  color: #ffffffff;
+  color: rgb(172,134,99);
   letter-spacing: -2px;
   line-height: 1;
-  font-family: 'Playfair Display', serif;
+  font-weight: bold;
 }
 </style>

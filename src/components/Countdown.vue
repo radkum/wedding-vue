@@ -62,13 +62,12 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  font-family: 'Poppins';
 }
 .countdown-card {
   min-width: 360px;
   padding: 1.6rem 2.8rem;
   border-radius: 18px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(186,116,119, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 16px 60px rgba(2,6,23,0.5);
