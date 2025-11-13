@@ -35,6 +35,7 @@ body {
   background-size: auto;
   background-position: top left;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 h1 {

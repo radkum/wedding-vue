@@ -19,8 +19,14 @@ export default {
 
 <style scoped>
 #app{
-  margin-top: 5rem;
   font-family: "Ink Free", cursive;
+  color: #324c4e;
+}
+
+@media (min-width: 768px) {
+  #app {
+    margin-top: 5rem;
+  }
 }
 body {
   margin: 0;
@@ -39,10 +45,9 @@ iframe {
 
 .title {
   font-size: 3.5rem;
-  font-weight: 400;
+  font-weight: bold;
   color: rgb(172,134,99);
   letter-spacing: -2px;
   line-height: 1;
-  font-weight: bold;
 }
 </style>
