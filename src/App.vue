@@ -23,11 +23,7 @@ export default {
   color: #324c4e;
 }
 
-@media (min-width: 768px) {
-  #app {
-    margin-top: 5rem;
-  }
-}
+
 body {
   margin: 0;
 }
