@@ -1,9 +1,9 @@
 <template>
   <div class="countdown-wrap">
     <div class="countdown-card" role="status" aria-live="polite">
-      <div class="days-count">{{ days }} dni</div>
-      <div class="hours-count">{{ hours }} godzin</div>
-      <div class="minutes-count">{{ minutes }} minut </div>
+      <div class="days-count">{{ days }}</div>
+      <div class="hours-count">{{ hours }}</div>
+      <div class="minutes-count">{{ minutes }} </div>
     </div>
   </div>
 </template>
@@ -26,23 +26,44 @@ export default {
   },
   computed: {
     days() {
-      const targetMs = new Date(this.target).getTime();
+      const targetMs = new Date('2026-05-30T16:00:00').getTime();
       const diffMs = Math.max(0, targetMs - this.now);
-      return Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      const days_num = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      if (days_num == 0) {
+        return '';
+      } else if (days_num == 1) {
+        return days_num + ' dzień';
+      } else {
+        return days_num + ' dni';
+      }
     },
     hours(){
-      const targetMs = new Date(this.target).getTime();
+      const targetMs = new Date('2026-05-30T16:00:00').getTime();
       const diffMs = Math.max(0, targetMs - this.now);
       const all_hours = Math.floor(diffMs / (1000 * 60 * 60));
       const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-      return all_hours - days*24;
+      const hours_num = all_hours - days*24;
+      if (hours_num == 1) {
+        return hours_num + ' godzinę';
+      } else if ([2,3,4,22,23].includes(hours_num) ) {
+        return hours_num + ' godziny';
+      } else {
+        return hours_num + ' godzin';
+      }
     },
     minutes(){
       const targetMs = new Date(this.target).getTime();
       const diffMs = Math.max(0, targetMs - this.now);
       const all_minutes = Math.floor(diffMs / (1000 * 60));
       const all_hours = Math.floor(diffMs / (1000 * 60 * 60));
-      return all_minutes - all_hours*60;
+      const minutes_num = all_minutes - all_hours*60;
+      if (minutes_num == 1) {
+        return minutes_num + ' minutę';
+      } else if ([2,3,4,22,23,24,32,33,34,42,43,44,52,53,54].includes(minutes_num) ) {
+        return minutes_num + ' minuty';
+      } else {
+        return minutes_num + ' minut';
+      }
     },
   },
   mounted() {

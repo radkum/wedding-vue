@@ -18,8 +18,10 @@ export default {
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower:wght@400;700&display=swap');
+
 #app{
-  font-family: "Ink Free", cursive;
+  font-family: "Indie Flower", cursive;
   color: #324c4e;
 }
 
