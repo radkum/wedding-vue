@@ -23,7 +23,7 @@
     </div>
     <nav id="navigation" class="navigation">
       <div class="navigation-container">
-        <a href="#">
+        <router-link to="/">
           <div class="navigation-brand">
             <svg
               width="28"
@@ -41,26 +41,25 @@
                 stroke-linejoin="round"
               ></path>
             </svg>
-            <span class="section-title">Wesele</span>
+      <span class="section-title">Wesele</span>
           </div>
-        </a>
+    </router-link>
         <div class="hero-nav">
-          <a href="registration">
+          <router-link to="/registration">
             <div class="showcase-countdown-label"><span>RSVP</span></div>
-          </a>
-          <a href="#church">
-            <!-- <div class="hero-nav-link"><span>Kościół</span></div>-->
+          </router-link>
+          <router-link :to="{ path: '/', hash: '#church' }">
             <div class="showcase-countdown-label"><span>Kościół</span></div>
-          </a>
-          <a href="#wedding_hall">
+          </router-link>
+          <router-link :to="{ path: '/', hash: '#wedding_hall' }">
             <div class="showcase-countdown-label"><span>Sala</span></div>
-          </a>
-          <a href="#timeline">
-            <div class="showcase-countdown-label"><span>Plan </span></div>
-          </a>
-          <a href="photos">
+          </router-link>
+          <router-link :to="{ path: '/', hash: '#timeline' }">
+            <div class="showcase-countdown-label"><span>Plan</span></div>
+          </router-link>
+          <router-link to="/photos">
             <div class="showcase-countdown-label"><span>Zdjęcia</span></div>
-          </a>
+          </router-link>
         </div>
         <div class="showcase-countdown">
           <div class="showcase-countdown-item">
@@ -191,27 +190,27 @@
       </div>
       <ul class="navigation-mobile-menu">
         <li class="navigation-mobile-menu-item">
-          <a href="#">
+          <a href="registration">
             <div class="navigation-mobile-link"><span>Potwierdzenie</span></div>
           </a>
         </li>
         <li class="navigation-mobile-menu-item">
-          <a href="#church">
+          <router-link :to="{ path: '/', hash: '#church' }">
             <div class="navigation-mobile-link"><span>Kościół</span></div>
-          </a>
+          </router-link>
         </li>
         <li class="navigation-mobile-menu-item">
-          <a href="#wedding-hall">
+          <router-link :to="{ path: '/', hash: '#wedding_hall' }">
             <div class="navigation-mobile-link"><span>Sala</span></div>
-          </a>
+          </router-link>
         </li>
         <li class="navigation-mobile-menu-item">
-          <a href="#timeline">
+          <router-link :to="{ path: '/', hash: '#timeline' }">
             <div class="navigation-mobile-link"><span>Plan</span></div>
-          </a>
+          </router-link>
         </li>
         <li class="navigation-mobile-menu-item">
-          <a href="photos">
+          <a href="/photos">
             <div class="navigation-mobile-link"><span>Zdjęcia</span></div>
           </a>
         </li>
@@ -362,6 +361,100 @@ export default {
 <style scoped>
 .navigation-contents {
   display: contents;
+}
+
+/* --- Timeline section --- */
+#timeline {
+  margin: 2rem auto;
+  max-width: 860px;
+  padding: 0 1rem;
+}
+
+.timeline-title {
+  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(0,0,0,0.15);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 0.75rem 1rem;
+  align-items: start;
+  padding: 0.75rem 0 1rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0.65rem;
+  top: 0.9rem;
+  width: 10px;
+  height: 10px;
+  background: #324c4e;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(50,76,78,0.25);
+}
+
+.timeline-time {
+  font-weight: 600;
+  color: #324c4e;
+  background: rgba(50,76,78,0.08);
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  text-align: center;
+  min-width: 70px;
+}
+
+.timeline-content {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+}
+
+.timeline-heading {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-weight: 600;
+}
+
+.timeline-note {
+  margin: 0;
+  font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .timeline {
+    padding-left: 1.25rem;
+  }
+  .timeline-item {
+    grid-template-columns: 72px 1fr;
+  }
+  .timeline-time {
+    font-size: 0.9rem;
+  }
 }
  
 .navigation-display-none {
