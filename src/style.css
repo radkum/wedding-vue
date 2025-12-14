@@ -1,3 +1,29 @@
+/* Compact navigation for mobile: fit items in one line */
+@media (max-width: 480px) {
+  .hero-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0; /* smaller spacing */
+    flex-wrap: nowrap; /* keep on one line */
+    overflow: hidden;
+  }
+  .hero-nav-link, .showcase-countdown-label {
+    padding: 0.2rem 0.35rem; /* tighter touch area */
+    border-radius: 6px;
+    font-size: 0.8rem; /* smaller font */
+    line-height: 1.1;
+    white-space: nowrap; /* prevent line breaks */
+  }
+  .section-title {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .navigation-brand-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
 :root {
   --spacing-lg: 1rem;
   --spacing-md: 0.75rem;
@@ -1360,7 +1386,7 @@
 }
  
 .hero-nav {
-  gap: var(--spacing-md);
+  gap: var(--spacing-2xl);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -3218,7 +3244,7 @@
     margin-bottom: var(--spacing-xl);
   }
   .hero-nav {
-    gap: var(--spacing-sm);
+    gap: 0;
   }
   .hero-date-text {
     padding: var(--spacing-xs) var(--spacing-lg);
@@ -3262,7 +3288,7 @@
     padding: var(--spacing-xl) var(--spacing-lg);
   }
   .showcase-countdown {
-    gap: var(--spacing-md);
+    gap: 0rem;
   }
   .showcase-countdown-value {
     font-size: clamp(2rem, 8vw, 3rem);
@@ -3465,7 +3491,7 @@
     flex-direction: column;
   }
   .showcase-countdown {
-    gap: var(--spacing-sm);
+    gap: 0rem;
   }
   .showcase-countdown-value {
     font-size: 2rem;

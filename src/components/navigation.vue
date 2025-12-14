@@ -46,7 +46,7 @@
         </a>
         <div class="hero-nav">
           <a href="registration">
-            <div class="showcase-countdown-label"><span>Potwierdzenie</span></div>
+            <div class="showcase-countdown-label"><span>RSVP</span></div>
           </a>
           <a href="#church">
             <!-- <div class="hero-nav-link"><span>Kościół</span></div>-->
@@ -192,27 +192,27 @@
       <ul class="navigation-mobile-menu">
         <li class="navigation-mobile-menu-item">
           <a href="#">
-            <div class="navigation-mobile-link"><span>Our Story</span></div>
+            <div class="navigation-mobile-link"><span>Potwierdzenie</span></div>
           </a>
         </li>
         <li class="navigation-mobile-menu-item">
-          <a href="#">
-            <div class="navigation-mobile-link"><span>Gallery</span></div>
+          <a href="#church">
+            <div class="navigation-mobile-link"><span>Kościół</span></div>
           </a>
         </li>
         <li class="navigation-mobile-menu-item">
-          <a href="#">
-            <div class="navigation-mobile-link"><span>Event Details</span></div>
+          <a href="#wedding-hall">
+            <div class="navigation-mobile-link"><span>Sala</span></div>
           </a>
         </li>
         <li class="navigation-mobile-menu-item">
-          <a href="#">
-            <div class="navigation-mobile-link"><span>RSVP</span></div>
+          <a href="#timeline">
+            <div class="navigation-mobile-link"><span>Plan</span></div>
           </a>
         </li>
         <li class="navigation-mobile-menu-item">
-          <a href="#">
-            <div class="navigation-mobile-link"><span>Registry</span></div>
+          <a href="photos">
+            <div class="navigation-mobile-link"><span>Zdjęcia</span></div>
           </a>
         </li>
       </ul>
@@ -378,6 +378,15 @@ export default {
 @media (max-width: 600px) {
   .section-title {
     font-size: 1.5rem !important;
+    display: none !important;
+  }
+  /* Make countdown numbers smaller on mobile */
+  .showcase-countdown-value {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+  }
+  .showcase-countdown-label {
+    font-size: 0.4rem !important;
   }
   .navbar,
   .nav-container,

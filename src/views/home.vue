@@ -50,7 +50,7 @@
     </div>
     <div class="features-section">
       <div class="features-grid">
-        <a href="#venue" id="venue">
+        <a href="#church" id="venue">
           <div class="features-card">
             <div class="features-icon">
               <svg
@@ -79,7 +79,7 @@
             </p>
           </div>
         </a>
-        <a href="#rsvp" id="rsvp">
+        <a href="registration" id="rsvp">
           <div class="features-card">
             <div class="features-icon">
               <svg
@@ -108,7 +108,7 @@
             </p>
           </div>
         </a>
-        <a href="#gallery" id="gallery">
+        <a href="photos" id="gallery">
           <div class="features-card">
             <div class="features-icon">
               <svg
@@ -137,7 +137,7 @@
             </p>
           </div>
         </a>
-        <a href="#registry" id="registry">
+        <a href="#timeline" id="registry">
           <div class="features-card">
             <div class="features-icon">
               <svg
