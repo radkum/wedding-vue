@@ -206,11 +206,10 @@
         </div>
       </div>
     </div>
-    <div id="timeline" class="home-timeline hero-section">
+    <div id="timeline" class="home-timeline timeline-section">
       <div class="hero-background"><div class="hero-overlay"></div></div>
       <div class="hero-content">
         <div class="hero-names">
-          <h1 class="hero-title home-hero-title">Timeline</h1>
           <section id="timeline" class="wedding-timeline">
       <h2>Plan dnia wesela</h2>
       <ul>
