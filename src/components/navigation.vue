@@ -54,7 +54,7 @@
           <router-link :to="{ path: '/', hash: '#wedding_hall' }">
             <div class="showcase-countdown-label"><span>Sala</span></div>
           </router-link>
-          <router-link :to="{ path: '/', hash: '#timeline' }">
+          <router-link :to="{ path: '/', hash: '#timeline-section' }">
             <div class="showcase-countdown-label"><span>Plan</span></div>
           </router-link>
           <router-link to="/photos">
@@ -205,7 +205,7 @@
           </router-link>
         </li>
         <li class="navigation-mobile-menu-item">
-          <router-link :to="{ path: '/', hash: '#timeline' }">
+          <router-link :to="{ path: '/', hash: '#timeline-section' }">
             <div class="navigation-mobile-link"><span>Plan</span></div>
           </router-link>
         </li>
@@ -368,6 +368,7 @@ export default {
   margin: 2rem auto;
   max-width: 860px;
   padding: 0 1rem;
+  position: relative; /* create positioning context for ::before */
 }
 
 .timeline-title {
@@ -381,16 +382,6 @@ export default {
   position: relative;
   margin: 0;
   padding-left: 1.5rem;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 0.75rem;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: rgba(0,0,0,0.15);
 }
 
 .timeline-item {

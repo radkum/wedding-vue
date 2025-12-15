@@ -165,34 +165,41 @@
           </div>
         </a>
       </div>
+      <div id="location"> </div>
     </div>
-    <div id="church" class="showcase-section">
-      <Location object_name="Kościół" description="Msza odbędzie się w kościele Najświętszego serca Pana Jezusa w Mokrzyskach o godzinie 15:00" 
-      link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34515.63806859726!2d20.586372649103378!3d49.98529443948824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471628bc2f78659d%3A0xdf106acd59c3faf3!2sKo%C5%9Bci%C3%B3%C5%82%20Naj%C5%9Bwi%C4%99tszego%20Serca%20Pana%20Jezusa%20w%20Mokrzyskach!5e0!3m2!1spl!2spl!4v1760345034512!5m2!1spl!2spl" />
+    <div class="locations-row">
+      <div id="church" class="scrollable">
+        <section class="showcase-section">
+        <Location object_name="Kościół" description="Msza odbędzie się w kościele Najświętszego serca Pana Jezusa w Mokrzyskach o godzinie 15:00" 
+        link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34515.63806859726!2d20.586372649103378!3d49.98529443948824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471628bc2f78659d%3A0xdf106acd59c3faf3!2sKo%C5%9Bci%C3%B3%C5%82%20Naj%C5%9Bwi%C4%99tszego%20Serca%20Pana%20Jezusa%20w%20Mokrzyskach!5e0!3m2!1spl!2spl!4v1760345034512!5m2!1spl!2spl" />
+        </section>
+      </div>
+      <div id="wedding_hall" class="scrollable">
+        <div  class="showcase-section scrollable">
+        <Location object_name="Sala weselna" description="Sala weselna znajduje się w Borku. Znajdują się tam dwie sale. Wesele odbędzie się w sali 'Stodoła'" 
+        link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81985.89909041725!2d20.334160944332883!3d50.047719556816325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47162f8f4c12a0b9%3A0x64ae37262f06366!2sRestauracja%20STODO%C5%81A%20Borek!5e0!3m2!1spl!2spl!4v1760344964669!5m2!1spl!2spl" />
+        </div>
+      </div>
     </div>
-    <div id="wedding_hall" class="showcase-section">
-      <Location object_name="Sala weselna" description="Sala weselna znajduje się w borku" 
-      link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81985.89909041725!2d20.334160944332883!3d50.047719556816325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47162f8f4c12a0b9%3A0x64ae37262f06366!2sRestauracja%20STODO%C5%81A%20Borek!5e0!3m2!1spl!2spl!4v1760344964669!5m2!1spl!2spl" />
-    </div>
-    <div id="timeline" class="home-timeline timeline-section">
+    <div id="timeline-section" class="home-timeline timeline-section scrollable">
       <div class="hero-background"><div class="hero-overlay"></div></div>
       <div class="hero-content">
         <div class="hero-names">
-          <section id="timeline" class="wedding-timeline">
-      <h2>Plan dnia wesela</h2>
-      <ul>
-        <li><strong>15:00</strong> – Rozpoczęcie ceremonii</li>
-        <li><strong>16:00</strong> – Zdjęcia grupowe</li>
-        <li><strong>16:30</strong> – Początek przyjęcia</li>
-        <li><strong>17:00</strong> – Obiad</li>
-        <li><strong>18:30</strong> – Toasty i przemówienia</li>
-        <li><strong>19:00</strong> – Pierwszy taniec</li>
-        <li><strong>19:15</strong> – Zabawa taneczna</li>
-        <li><strong>20:30</strong> – Krojenie tortu</li>
-        <li><strong>21:00</strong> – Dalsza zabawa</li>
-        <li><strong>00:00</strong> – Pożegnanie</li>
-      </ul>
-    </section>
+          <section  class="wedding-timeline timeline ">
+          <h2>Plan dnia wesela</h2>
+          <ul>
+            <li><strong>15:00</strong> – Rozpoczęcie ceremonii</li>
+            <li><strong>16:00</strong> – Zdjęcia grupowe</li>
+            <li><strong>16:30</strong> – Początek przyjęcia</li>
+            <li><strong>17:00</strong> – Obiad</li>
+            <li><strong>18:30</strong> – Toasty i przemówienia</li>
+            <li><strong>19:00</strong> – Pierwszy taniec</li>
+            <li><strong>19:15</strong> – Zabawa taneczna</li>
+            <li><strong>20:30</strong> – Krojenie tortu</li>
+            <li><strong>21:00</strong> – Dalsza zabawa</li>
+            <li><strong>00:00</strong> – Pożegnanie</li>
+          </ul>
+        </section>
           <div class="home-hero-heart2 hero-heart"></div>
         </div>
       </div>
@@ -381,21 +388,21 @@ export default {
 }
 
 /* Ensure the whole timeline section has a white background */
-#timeline {
+#timeline-section {
   background: #ffffff;
   border-radius: 16px;
-  padding: 1rem;
+  padding: 0rem;
 }
 
 /* Remove overlay/image so white background is visible */
-#timeline .hero-background,
-#timeline .hero-background .hero-overlay,
-#timeline .hero-background .hero-image {
+#timeline-section .hero-background,
+#timeline-section .hero-background .hero-overlay,
+#timeline-section .hero-background .hero-image {
   display: none;
 }
 
 /* Wedding invitation style for timeline */
-#timeline h2 {
+#timeline-section h2 {
   font-family: 'Great Vibes', cursive;
   font-weight: 400;
   font-size: clamp(2rem, 6vw, 3rem);
@@ -404,7 +411,27 @@ export default {
   margin: 0 0 0.75rem;
 }
 
-#timeline ul {
+/* Locations row: show church and hall side-by-side on wide screens */
+.locations-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.locations-row .showcase-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+@media (max-width: 800px) {
+  .locations-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+#timeline-section ul {
   list-style: none;
   padding: 0;
   margin: 0 auto;
@@ -412,7 +439,7 @@ export default {
   background: #ffffff; /* white backdrop for the list area */
 }
 
-#timeline li {
+#timeline-section li {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1rem, 2.6vw, 1.2rem);
   color: #1a1a1a;
@@ -424,11 +451,11 @@ export default {
   border-bottom: 1px dashed rgba(0,0,0,0.08);
 }
 
-#timeline li:last-child {
+#timeline-section li:last-child {
   border-bottom: none;
 }
 
-#timeline li strong {
+#timeline-section li strong {
   font-weight: 600;
   color: #0f2a2e;
   background: #f2fbfd; /* subtle but still white-ish chip */
