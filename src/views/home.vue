@@ -204,11 +204,7 @@
         </div>
       </div>
     </div>
-    <app-footer>
-      <template v-slot:text>
-        <div class="home-fragment9"></div>
-      </template>
-    </app-footer>
+    <app-footer />
   </div>
 </template>
 

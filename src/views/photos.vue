@@ -1,7 +1,6 @@
 <template>
   <div class="photos-container1">
-    <app-navigation>
-    </app-navigation>
+    <app-navigation />
     <h1> .</h1>
     <h1> .</h1>
     <h1> .</h1>
@@ -31,6 +30,7 @@
         </svg>
       </div>
     </a>
+    <app-footer />
   </div>
 </template>
 
@@ -46,17 +46,11 @@ export default {
     AppFooter,
   },
   metaInfo: {
-    title: 'photos - Vivid Neat Dove',
+    title: 'photos',
     meta: [
       {
         property: 'og:title',
-        content: 'photos - Vivid Neat Dove',
-      },
-    ],
-    link: [
-      {
-        rel: 'canonical',
-        href: 'https://vivid-neat-dove-2yhlnu.teleporthq.app/photos',
+        content: 'photos',
       },
     ],
   },

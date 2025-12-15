@@ -1,5 +1,6 @@
 <template>
   <div class="registration-container1">
+    <app-navigation />
     <form
       data-form-id="8c18e7a7-970c-4aea-a177-d5489ff33330"
       class="registration-form"
@@ -74,25 +75,27 @@
         </svg>
       </div>
     </a>
+    <app-footer />
   </div>
 </template>
 
 <script>
+import AppNavigation from '../components/navigation'
+import AppFooter from '../components/footer'
+
 export default {
   name: 'Registration',
   props: {},
+  components: {
+    AppNavigation,
+    AppFooter,
+  },
   metaInfo: {
-    title: 'registration - Vivid Neat Dove',
+    title: 'registration',
     meta: [
       {
         property: 'og:title',
-        content: 'registration - Vivid Neat Dove',
-      },
-    ],
-    link: [
-      {
-        rel: 'canonical',
-        href: 'https://vivid-neat-dove-2yhlnu.teleporthq.app/registration',
+        content: 'registration',
       },
     ],
   },
