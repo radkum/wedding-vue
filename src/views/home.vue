@@ -42,9 +42,7 @@
           </span>
           <span>
             w obecności rodziny i przyjaciół
-            <span v-html="rawin1c"></span>
           </span>
-          <span v-html="rawfg5y"></span>
         </p>
       </div>
     </div>
@@ -169,42 +167,12 @@
       </div>
     </div>
     <div id="church" class="showcase-section">
-      <div class="showcase-background">
-        <div class="hero-content">
-          <h1 class="hero-title home-hero-title">Lokalizacja kościoła</h1>
-          <div class="location" id="church_id">
-        <h2 id="church">Msza odbędzie się w kościele Najświętszego serca Pana Jezusa w Mokrzyskach o godzinie 16:00</h2>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34515.63806859726!2d20.586372649103378!3d49.98529443948824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471628bc2f78659d%3A0xdf106acd59c3faf3!2sKo%C5%9Bci%C3%B3%C5%82%20Naj%C5%9Bwi%C4%99tszego%20Serca%20Pana%20Jezusa%20w%20Mokrzyskach!5e0!3m2!1spl!2spl!4v1760345034512!5m2!1spl!2spl"
-            width="100%"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-        </div>
-      </div>
+      <Location object_name="Kościół" description="Msza odbędzie się w kościele Najświętszego serca Pana Jezusa w Mokrzyskach o godzinie 15:00" 
+      link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34515.63806859726!2d20.586372649103378!3d49.98529443948824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471628bc2f78659d%3A0xdf106acd59c3faf3!2sKo%C5%9Bci%C3%B3%C5%82%20Naj%C5%9Bwi%C4%99tszego%20Serca%20Pana%20Jezusa%20w%20Mokrzyskach!5e0!3m2!1spl!2spl!4v1760345034512!5m2!1spl!2spl" />
     </div>
     <div id="wedding_hall" class="showcase-section">
-      <div class="showcase-background">
-        <div class="hero-content">
-          <h1 class="hero-title home-hero-title">Sala weselna</h1>
-          <div class="location">
-        <h2 id="wedding">Sala weselna znajduje się w borku</h2>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81985.89909041725!2d20.334160944332883!3d50.047719556816325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47162f8f4c12a0b9%3A0x64ae37262f06366!2sRestauracja%20STODO%C5%81A%20Borek!5e0!3m2!1spl!2spl!4v1760344964669!5m2!1spl!2spl"
-            width="100%"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-        </div>
-      </div>
+      <Location object_name="Sala weselna" description="Sala weselna znajduje się w borku" 
+      link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81985.89909041725!2d20.334160944332883!3d50.047719556816325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47162f8f4c12a0b9%3A0x64ae37262f06366!2sRestauracja%20STODO%C5%81A%20Borek!5e0!3m2!1spl!2spl!4v1760344964669!5m2!1spl!2spl" />
     </div>
     <div id="timeline" class="home-timeline timeline-section">
       <div class="hero-background"><div class="hero-overlay"></div></div>
@@ -242,6 +210,7 @@ import DangerousHTML from 'dangerous-html/vue'
 
 import AppNavigation from '../components/navigation'
 import AppFooter from '../components/footer'
+import Location from '../components/location'
 
 export default {
   name: 'Home',
@@ -250,12 +219,7 @@ export default {
     AppNavigation,
     DangerousHTML,
     AppFooter,
-  },
-  data() {
-    return {
-      rawin1c: ' ',
-      rawfg5y: ' ',
-    }
+    Location,
   },
   metaInfo: {
     title: 'Wesele Klaudii i Radka',

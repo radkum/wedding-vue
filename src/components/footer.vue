@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import FooterColumn from '../components/footer_column'
+import FooterColumn from '../components/footer-column'
 import Copyright from '../components/copyright'
 
 export default {
