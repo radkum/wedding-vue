@@ -232,7 +232,7 @@
     </div>
     <app-footer>
       <template v-slot:text>
-        <div class="home-fragment9"><span class="home-text25">Kontakt</span></div>
+        <div class="home-fragment9"></div>
       </template>
     </app-footer>
   </div>
@@ -277,6 +277,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap');
 .home-container1 {
   width: 100%;
   display: block;
@@ -414,5 +415,63 @@ export default {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+
+/* Ensure the whole timeline section has a white background */
+#timeline {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+/* Remove overlay/image so white background is visible */
+#timeline .hero-background,
+#timeline .hero-background .hero-overlay,
+#timeline .hero-background .hero-image {
+  display: none;
+}
+
+/* Wedding invitation style for timeline */
+#timeline h2 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: #2b3a3b;
+  text-align: center;
+  margin: 0 0 0.75rem;
+}
+
+#timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 860px;
+  background: #ffffff; /* white backdrop for the list area */
+}
+
+#timeline li {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  color: #1a1a1a;
+  line-height: 1.5;
+  padding: 0.35rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  border-bottom: 1px dashed rgba(0,0,0,0.08);
+}
+
+#timeline li:last-child {
+  border-bottom: none;
+}
+
+#timeline li strong {
+  font-weight: 600;
+  color: #0f2a2e;
+  background: #f2fbfd; /* subtle but still white-ish chip */
+  border-radius: 8px;
+  padding: 0.2rem 0.5rem;
+  min-width: 74px;
+  text-align: center;
 }
 </style>
