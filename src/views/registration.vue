@@ -1,80 +1,17 @@
 <template>
-  <div class="registration-container1">
+  <div>
     <app-navigation />
-    <form
-      data-form-id="8c18e7a7-970c-4aea-a177-d5489ff33330"
-      class="registration-form"
-    >
-      <input
-        type="text"
-        id="thq_iban_c7Vh"
-        name="iban"
-        tabindex="-1"
-        spellcheck="false"
-        autocorrect="off"
-        placeholder="iban"
-        autocomplete="new-password"
-        autocapitalize="off"
-        data-form-field-id="thq_iban_c7Vh"
-        class="registration-textinput1 input"
-      />
-      <div class="registration-container2">
-        <label>Imię i Nazwisko</label>
-        <input
-          type="text"
-          id="thq_name_x3ZW"
-          name="name"
-          placeholder="Name"
-          data-form-field-id="thq_name_x3ZW"
-          class="registration-textinput2 input"
-        />
-      </div>
-      <div class="registration-container3">
-        <label>Email</label>
-        <input
-          type="email"
-          id="thq_email_UHsL"
-          name="email"
-          placeholder="Email"
-          data-form-field-id="thq_email_UHsL"
-          class="registration-textinput3 input"
-        />
-      </div>
-      <button
-        id="thq_button_7jAH"
-        name="button"
-        type="submit"
-        data-form-field-id="thq_button_7jAH"
-        class="registration-button button"
-      >
-        Submit
-      </button>
-    </form>
-    <a href="https://play.teleporthq.io/signup" class="registration-link">
-      <div aria-label="Sign up to TeleportHQ" class="registration-container4">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 19 21"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="registration-icon1"
-        >
-          <path
-            d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
-            fill="#B23ADE"
-          ></path>
-          <path
-            d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
-            fill="#FF5C5C"
-          ></path>
-          <path
-            d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
-            fill="#2874DE"
-          ></path>
-        </svg>
-      </div>
-    </a>
+    <div class="registration-container2">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLScFc-JOKgR0mpuRRi3JmTqOCnt3HqDfvpWc8cDpxYNNimwIRw/viewform?embedded=true" 
+        width="640" 
+        height="1200"
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        Ładuję…
+      </iframe>
+    </div>
     <app-footer />
   </div>
 </template>
@@ -90,8 +27,58 @@ export default {
     AppNavigation,
     AppFooter,
   },
+  data() {
+    return {
+      checkInterval: null,
+    };
+  },
+  methods: {
+    scanIframeContent() {
+      const iframe = this.$refs.iframeElement;
+      if (!iframe) return;
+
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        if (!iframeDoc) {
+          console.log('Cannot access iframe document (cross-origin)');
+          return;
+        }
+
+        // Iterate through all elements and log their text
+        const allElements = iframeDoc.querySelectorAll('*');
+        console.log(`Found ${allElements.length} elements in iframe`);
+        
+        allElements.forEach((element, index) => {
+          const text = element.innerText || element.textContent;
+          if (text && text.trim()) {
+            console.log(`[${index}] ${element.tagName}: ${text.substring(0, 100)}`);
+          }
+        });
+
+        // Check for thank you message specifically
+        const bodyText = iframeDoc.body.innerText || '';
+        if (bodyText.includes('Thank you')) {
+          console.log('✓ Found "Thank you" message!');
+          iframe.style.height = '300px';
+        }
+      } catch (e) {
+        console.error('Error accessing iframe:', e.message);
+      }
+    }
+  },
+  mounted() {
+    // Check every 2 seconds
+    this.checkInterval = setInterval(this.scanIframeContent, 2000);
+    // Also check on load
+    this.$refs.iframeElement?.addEventListener('load', this.scanIframeContent);
+  },
+  beforeDestroy() {
+    if (this.checkInterval) {
+      clearInterval(this.checkInterval);
+    }
+  },
   metaInfo: {
-    title: 'registration',
+    title: 'Potwierdzenie obecności',
     meta: [
       {
         property: 'og:title',
@@ -107,16 +94,21 @@ export default {
   width: 100%;
   display: flex;
   min-height: 100vh;
-  align-items: center;
+  align-items: stretch;
   flex-direction: column;
 }
  
 .registration-form {
   gap: 8px;
-  width: 300px;
+  width: 100%;
+  max-width: 320px;
   height: auto;
   display: flex;
+  flex: 1;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
  
 .registration-textinput1 {
@@ -132,9 +124,19 @@ export default {
 }
  
 .registration-container2 {
+  margin-top: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+.registration-container2 iframe {
+  width: 100%;
+  max-width: 640px;
+  border: none;
 }
  
 .registration-textinput2 {

@@ -6,7 +6,7 @@
       <div class="hero-background">
         <img
           alt="Newlywed couple walking hand in hand through a golden field on their wedding day"
-          src="https://images.pexels.com/photos/3352398/pexels-photo-3352398.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+          src="/background.png"
           class="hero-image"
         />
         <div class="hero-overlay"></div>
@@ -67,16 +67,19 @@
           <section  class="wedding-timeline timeline ">
           <h2>Plan dnia wesela</h2>
           <ul>
-            <li><strong>15:00</strong> – Rozpoczęcie ceremonii</li>
-            <li><strong>16:00</strong> – Zdjęcia grupowe</li>
-            <li><strong>16:30</strong> – Początek przyjęcia</li>
+            <li><strong>15:00</strong> – Rozpoczęcie ceremonii w kościele</li>
+            <li><strong>16:00</strong> – Wspólne zdjęcie przed kościołem</li>
+            <li><strong>16:30</strong> – Powitanie Państwa Młodych w sali</li>
             <li><strong>17:00</strong> – Obiad</li>
-            <li><strong>18:30</strong> – Toasty i przemówienia</li>
+            <li><strong>18:00</strong> – Prezenty oraz zdjęcia </li>
             <li><strong>19:00</strong> – Pierwszy taniec</li>
-            <li><strong>19:15</strong> – Zabawa taneczna</li>
-            <li><strong>20:30</strong> – Krojenie tortu</li>
-            <li><strong>21:00</strong> – Dalsza zabawa</li>
-            <li><strong>00:00</strong> – Pożegnanie</li>
+            <li><strong>20:00</strong> – I Kolacja</li>
+            <li><strong>22:00</strong> – II Kolacja</li>
+            <li><strong>23:30</strong> – Zabawy </li>
+            <li><strong>00:00</strong> – Otrzepiny </li>
+            <li><strong>01:00</strong> – III Kolacja</li>
+            <li><strong>03:00</strong> – Impreza na całego</li>
+            <li><strong>05:00</strong> – Pożegnanie</li>
           </ul>
         </section>
           <div class="home-hero-heart2 hero-heart"></div>
@@ -112,10 +115,6 @@ export default {
       },
     ],
     link: [
-      {
-        rel: 'canonical',
-        href: 'https://vivid-neat-dove-2yhlnu.teleporthq.app/',
-      },
     ],
   },
 }
