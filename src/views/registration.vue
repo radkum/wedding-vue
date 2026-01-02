@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="registration-main">
     <app-navigation />
     <div class="registration-container2">
       <iframe 
+        ref="iframeElement"
         src="https://docs.google.com/forms/d/e/1FAIpQLScFc-JOKgR0mpuRRi3JmTqOCnt3HqDfvpWc8cDpxYNNimwIRw/viewform?embedded=true" 
         width="640" 
         height="1200"
@@ -32,50 +33,28 @@ export default {
       checkInterval: null,
     };
   },
-  methods: {
-    scanIframeContent() {
-      const iframe = this.$refs.iframeElement;
-      if (!iframe) return;
-
-      try {
-        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-        if (!iframeDoc) {
-          console.log('Cannot access iframe document (cross-origin)');
-          return;
-        }
-
-        // Iterate through all elements and log their text
-        const allElements = iframeDoc.querySelectorAll('*');
-        console.log(`Found ${allElements.length} elements in iframe`);
-        
-        allElements.forEach((element, index) => {
-          const text = element.innerText || element.textContent;
-          if (text && text.trim()) {
-            console.log(`[${index}] ${element.tagName}: ${text.substring(0, 100)}`);
-          }
-        });
-
-        // Check for thank you message specifically
-        const bodyText = iframeDoc.body.innerText || '';
-        if (bodyText.includes('Thank you')) {
-          console.log('✓ Found "Thank you" message!');
-          iframe.style.height = '300px';
-        }
-      } catch (e) {
-        console.error('Error accessing iframe:', e.message);
-      }
-    }
-  },
+  methods: {},
   mounted() {
-    // Check every 2 seconds
-    this.checkInterval = setInterval(this.scanIframeContent, 2000);
-    // Also check on load
-    this.$refs.iframeElement?.addEventListener('load', this.scanIframeContent);
-  },
-  beforeDestroy() {
-    if (this.checkInterval) {
-      clearInterval(this.checkInterval);
+    const iframe = this.$refs.iframeElement;
+    
+    // Sprawdzamy localStorage na starcie
+    const wasReloaded = localStorage.getItem('iframeReloaded') === 'true';
+    if (wasReloaded) {
+      iframe.style.height = '330px';
+      console.log('Formularz był już przeładowany, wysokość: 400px');
+    } else {
+      iframe.style.height = '1200px';
+      console.log('Pierwszy raz, wysokość: 1200px');
     }
+
+    // Nasłuchujemy zdarzenia load
+    iframe.addEventListener('load', () => {
+      console.log('Iframe załadowany');
+      // Oznaczamy że formularz się załadował
+      localStorage.setItem('iframeReloaded', 'true');
+      iframe.style.height = '330px';
+      console.log('Iframe przeładowany, wysokość zmieniona na 300px');
+    });
   },
   metaInfo: {
     title: 'Potwierdzenie obecności',
@@ -90,6 +69,12 @@ export default {
 </script>
 
 <style scoped>
+.registration-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .registration-container1 {
   width: 100%;
   display: flex;
@@ -129,7 +114,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
   padding: var(--spacing-3xl) var(--spacing-lg);
 }
 
