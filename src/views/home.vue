@@ -6,7 +6,7 @@
       <div class="hero-background">
         <img
           alt="Newlywed couple walking hand in hand through a golden field on their wedding day"
-          src="/background.png"
+          src="/background3.jpg"
           class="hero-image"
         />
         <div class="hero-overlay"></div>
