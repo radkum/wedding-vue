@@ -29,13 +29,25 @@ export default {
 <style scoped>
 .location {
   margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .showcase-background {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: auto; /* grow with content */
   overflow: visible; /* avoid clipping the map */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .object-description {
