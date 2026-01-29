@@ -3,14 +3,16 @@
   display: block !important;      /* remove flex sizing */
   height: auto !important;        /* grow exactly to children */
   min-height: 0 !important;       /* clear all min-height constraints */
-  overflow: visible !important;   /* avoid clipping maps */
+  overflow: hidden !important;    /* clip to rounded corners */
   padding: var(--spacing-lg) !important; /* reduce padding */
+  border-radius: var(--border-radius-xl) !important; /* round the corners */
 }
 
-/* Remove absolute background in locations - let it flow naturally */
+/* Round the background gradient as well and let it flow naturally */
 .locations-row .showcase-section .showcase-background {
   position: relative !important;
   height: auto !important;
+  border-radius: var(--border-radius-xl) !important;
 }
 
 /* Ensure hero-content uses natural height in locations row */
