@@ -1,13 +1,24 @@
-/* Let showcase sections size to their content */
-.showcase-section {
-  height: auto;    /* grow exactly to children */
-  min-height: 0;   /* clear any min-height constraints */
+/* Let showcase sections in locations row size to their content */
+.locations-row .showcase-section {
+  display: block !important;      /* remove flex sizing */
+  height: auto !important;        /* grow exactly to children */
+  min-height: 0 !important;       /* clear all min-height constraints */
+  overflow: visible !important;   /* avoid clipping maps */
+  padding: var(--spacing-lg) !important; /* reduce padding */
 }
 
-/* Ensure hero-content uses natural height */
-.showcase-section .hero-content {
-  height: auto;
+/* Remove absolute background in locations - let it flow naturally */
+.locations-row .showcase-section .showcase-background {
+  position: relative !important;
+  height: auto !important;
 }
+
+/* Ensure hero-content uses natural height in locations row */
+.locations-row .showcase-section .hero-content {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
 /* Make .timeline-section ::before visible */
 .timeline-section {
   position: relative; /* required for absolute pseudo-element */
@@ -1358,8 +1369,17 @@
   position: absolute;
 }
  
-.scrollable {
+/* Only apply scrollable padding inside locations row */
+.locations-row .scrollable {
   padding-top: 5rem !important;
+}
+
+/* Timeline scrollable should not inherit location styles */
+#timeline-section.timeline-section.scrollable,
+.timeline-section.scrollable {
+  padding-top: 0 !important;
+  min-height: initial !important;
+  height: auto !important;
 }
 
 .hero-content {
@@ -3048,7 +3068,7 @@
   .about-image {
     height: 400px;
   }
-  .scrollable {
+  .locations-row .scrollable {
     padding-top: 2rem !important;
   }
   .showcase-spotlight {
@@ -3166,7 +3186,7 @@
 }
 
 @media(max-width: 800px) {
-  .scrollable {
+  .locations-row .scrollable {
     padding-top: 2rem !important;
   }
   .thq-section-padding {
@@ -3512,20 +3532,20 @@
 }
 
 @media(max-width: 660px) {
-  .showcase-section {
+  .locations-row .showcase-section {
     min-height: 55vh;
   }
 }
 
 @media(max-width: 479px) {
-  .showcase-section {
+  .locations-row .showcase-section {
     min-height: 52vh;
   }
 }
 
 
 @media(max-width: 479px) {
-  .scrollable {
+  .locations-row .scrollable {
     padding-top: 2rem !important;
   }
   .thq-section-padding {

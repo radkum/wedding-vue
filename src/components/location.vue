@@ -31,6 +31,13 @@ export default {
   margin-top: 16px;
 }
 
+.showcase-background {
+  display: block;
+  width: 100%;
+  height: auto; /* grow with content */
+  overflow: visible; /* avoid clipping the map */
+}
+
 .object-description {
   font-style: italic;
   color: white;
