@@ -71,7 +71,7 @@
             <li><strong>16:00</strong> – Wspólne zdjęcie przed kościołem</li>
             <li><strong>16:30</strong> – Powitanie Państwa Młodych w sali</li>
             <li><strong>17:00</strong> – Obiad</li>
-            <li><strong>18:00</strong> – Prezenty oraz zdjęcia </li>
+            <li><strong>18:00</strong> – Życzenia i wspólne zdjęcia </li>
             <li><strong>19:00</strong> – Pierwszy taniec</li>
             <li><strong>20:00</strong> – I Kolacja</li>
             <li><strong>22:00</strong> – II Kolacja</li>
