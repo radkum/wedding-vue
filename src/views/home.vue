@@ -29,13 +29,6 @@
           <span class="hero-date-text">30 Maj 2026</span>
         </div>
         <p class="hero-message section-content">
-          <span>
-            Dołącz do nas, świętując naszą historię miłosną i rozpoczynając naszą
-            wspólną podróż 
-          </span>
-          <span>
-            w obecności rodziny i przyjaciół
-          </span>
         </p>
       </div>
     </div>
@@ -112,7 +105,12 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&family=Caveat:wght@400;600&display=swap');
+
+.hero-title {
+  font-family: 'Caveat', cursive;
+}
+
 .home-container1 {
   width: 100%;
   display: block;
