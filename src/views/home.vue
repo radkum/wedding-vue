@@ -13,7 +13,7 @@
       </div>
       <div class="hero-content">
         <div class="hero-names">
-          <h1 class="hero-title home-hero-title">Klaudia &amp; Radek</h1>
+          <h1 class="hero-title home-hero-title">Klaudia i Radosław</h1>
           <div class="hero-heart">
               <path
                 d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676a.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
@@ -51,7 +51,7 @@
       <div class="hero-content">
         <div class="hero-names">
           <section  class="wedding-timeline timeline ">
-          <h2>Plan dnia wesela</h2>
+          <h2>Plan dnia</h2>
           <ul>
             <li><strong>15:00</strong> – Ceremonia ślubna</li>
             <li><strong>16:30</strong> – Toast powitalny</li>
@@ -105,10 +105,10 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&family=Caveat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&family=Qwitcher+Grypen&display=swap');
 
 .hero-title {
-  font-family: 'Caveat', cursive;
+  font-family: 'Qwitcher Grypen', cursive;
 }
 
 .home-container1 {
@@ -266,9 +266,9 @@ export default {
 
 /* Wedding invitation style for timeline */
 #timeline-section h2 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Qwitcher Grypen', cursive;
   font-weight: 400;
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(4rem, 6vw, 5rem);
   color: #2b3a3b;
   text-align: center;
   margin: 0 0 0.75rem;
@@ -280,6 +280,11 @@ export default {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: start;
+  border: none;
+}
+
+.locations-row .scrollable {
+  border: none;
 }
 
 .locations-row .showcase-section {

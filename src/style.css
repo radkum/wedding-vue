@@ -4,8 +4,7 @@
   height: auto !important;        /* grow exactly to children */
   min-height: 0 !important;       /* clear all min-height constraints */
   overflow: hidden !important;    /* clip to rounded corners */
-  padding: var(--spacing-lg) !important; /* reduce padding */
-  border-radius: var(--border-radius-xl) !important; /* round the corners */
+  border: none !important;
 }
 
 /* Round the background gradient as well and let it flow naturally */
@@ -742,10 +741,10 @@
 }
  
 .hero-title {
-  font-size: var(--font-size-6xl);
+  font-size: clamp(10rem, 10.5rem, 11rem);
   font-style: var(--font-style-heading);
   font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-heading);
+  font-weight: 100;
   line-height: var(--line-height-heading);
   letter-spacing: var(--letter-spacing-heading);
   text-transform: var(--text-transform-heading);

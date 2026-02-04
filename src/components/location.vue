@@ -1,7 +1,7 @@
 <template>
   <div class="showcase-background" >
     <div class="hero-content">
-      <h1 class="hero-title home-hero-title">{{ object_name }}</h1>
+      <h1 class="home-hero-title">{{ object_name }}</h1>
       <div class="location">
         <h2 class = "object-description"> {{ description }}</h2>
         <div class="map-embed">
@@ -27,6 +27,14 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap');
+
+h1 {
+  font-weight: 400;
+  font-size: clamp(4rem, 6vw, 5rem);
+  font-family: 'Qwitcher Grypen', cursive;
+}
+
 .location {
   margin-top: 16px;
   display: flex;
