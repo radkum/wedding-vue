@@ -326,7 +326,7 @@ export default {
 #timeline-section li strong {
   font-weight: 600;
   color: #0f2a2e;
-  background: #f2fbfd; /* subtle but still white-ish chip */
+  background: #f5ead8; /* neutral color matching the site palette */
   border-radius: 8px;
   padding: 0.2rem 0.5rem;
   min-width: 74px;
