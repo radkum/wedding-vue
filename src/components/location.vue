@@ -59,7 +59,6 @@ h1 {
 }
 
 .object-description {
-  font-style: italic;
   color: white;
 }
 
