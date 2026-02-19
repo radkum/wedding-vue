@@ -60,6 +60,7 @@ h1 {
 
 .object-description {
   color: white;
+  margin-bottom: 1.5rem;
 }
 
 /* Responsive 16:9 map wrapper to ensure height on mobile */
