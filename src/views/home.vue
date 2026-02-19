@@ -35,7 +35,7 @@
     <div class="locations-row">
       <div id="church" class="scrollable">
         <section class="showcase-section">
-        <Location object_name="Kościół" description="Msza odbędzie się w kościele pw. NSPJ w Mokrzyskach o godzinie 15:00" 
+        <Location object_name="Kościół" description="Msza odbędzie się w Mokrzyskach o godzinie 15:00 w kościele pod wezwaniem NSPJ"
         link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34515.63806859726!2d20.586372649103378!3d49.98529443948824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471628bc2f78659d%3A0xdf106acd59c3faf3!2sKo%C5%9Bci%C3%B3%C5%82%20Naj%C5%9Bwi%C4%99tszego%20Serca%20Pana%20Jezusa%20w%20Mokrzyskach!5e0!3m2!1spl!2spl!4v1760345034512!5m2!1spl!2spl" />
         </section>
       </div>
