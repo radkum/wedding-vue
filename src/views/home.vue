@@ -50,7 +50,7 @@
       <div class="hero-background"><div class="hero-overlay"></div></div>
       <div class="hero-content">
         <div class="hero-names">
-          <section  class="wedding-timeline timeline ">
+          <section class="wedding-timeline timeline ">
           <h2>Plan dnia</h2>
           <ul>
             <li><strong>15:00</strong> – Ceremonia ślubna</li>
@@ -339,5 +339,23 @@ export default {
   padding: 0.2rem 0.5rem;
   min-width: 74px;
   text-align: center;
+}
+</style>
+<style scoped>
+/* Ensure Location component uses a straight font, not cursive */
+.locations-row .showcase-section h2,
+.locations-row .showcase-section [class^="location"],
+.locations-row .showcase-section {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* Ensure Location description uses the same font as timeline li */
+.locations-row .showcase-section [class*="description"],
+.locations-row .showcase-section .location-description,
+.locations-row .showcase-section .description {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  color: #1a1a1a;
+  line-height: 1.5;
 }
 </style>
