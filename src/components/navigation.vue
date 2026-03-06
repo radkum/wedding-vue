@@ -190,9 +190,9 @@
       </div>
       <ul class="navigation-mobile-menu">
         <li class="navigation-mobile-menu-item">
-          <a href="registration">
+          <router-link to="/registration">
             <div class="navigation-mobile-link"><span>Potwierdzenie</span></div>
-          </a>
+          </router-link>
         </li>
         <li class="navigation-mobile-menu-item">
           <router-link :to="{ path: '/', hash: '#church' }">
@@ -210,9 +210,9 @@
           </router-link>
         </li>
         <li class="navigation-mobile-menu-item">
-          <a href="/photos">
+          <router-link to="/photos">
             <div class="navigation-mobile-link"><span>Zdjęcia</span></div>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
