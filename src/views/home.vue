@@ -6,21 +6,15 @@
       <div class="hero-background">
         <img
           alt="Newlywed couple walking hand in hand through a golden field on their wedding day"
-          src="/background3.jpg"
+          src="/background.jpg"
           class="hero-image"
         />
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
         <div class="hero-names">
-          <h1 class="hero-title home-hero-title">Klaudia &amp; Radek</h1>
+          <h1 class="hero-title home-hero-title"><span>Klaudia</span> <span>i</span> <span>Radosław</span></h1>
           <div class="hero-heart">
-            <svg
-              width="48"
-              xmlns="http://www.w3.org/2000/svg"
-              height="48"
-              viewBox="0 0 24 24"
-            >
               <path
                 d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676a.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
                 fill="none"
@@ -29,27 +23,19 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               ></path>
-            </svg>
           </div>
         </div>
         <div class="hero-date">
-          <span class="hero-date-text">30 Maj, 2026</span>
+          <span class="hero-date-text">30 Maj 2026</span>
         </div>
         <p class="hero-message section-content">
-          <span>
-            Dołącz do nas, świętując naszą historię miłosną i rozpoczynając naszą
-            wspólną podróż 
-          </span>
-          <span>
-            w obecności rodziny i przyjaciół
-          </span>
         </p>
       </div>
     </div>
     <div class="locations-row">
       <div id="church" class="scrollable">
         <section class="showcase-section">
-        <Location object_name="Kościół" description="Msza odbędzie się w kościele Najświętszego serca Pana Jezusa w Mokrzyskach o godzinie 15:00" 
+        <Location object_name="Kościół" description="Msza odbędzie się w Mokrzyskach o godzinie 15:00 w kościele pw Najświętszego Serca Pana Jezusa"
         link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34515.63806859726!2d20.586372649103378!3d49.98529443948824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471628bc2f78659d%3A0xdf106acd59c3faf3!2sKo%C5%9Bci%C3%B3%C5%82%20Naj%C5%9Bwi%C4%99tszego%20Serca%20Pana%20Jezusa%20w%20Mokrzyskach!5e0!3m2!1spl!2spl!4v1760345034512!5m2!1spl!2spl" />
         </section>
       </div>
@@ -64,21 +50,19 @@
       <div class="hero-background"><div class="hero-overlay"></div></div>
       <div class="hero-content">
         <div class="hero-names">
-          <section  class="wedding-timeline timeline ">
-          <h2>Plan dnia wesela</h2>
+          <section class="wedding-timeline timeline ">
+          <h2>Plan dnia</h2>
           <ul>
-            <li><strong>15:00</strong> – Rozpoczęcie ceremonii w kościele</li>
-            <li><strong>16:00</strong> – Wspólne zdjęcie przed kościołem</li>
-            <li><strong>16:30</strong> – Powitanie Państwa Młodych w sali</li>
+            <li><strong>15:00</strong> – Ceremonia ślubna</li>
+            <li><strong>16:30</strong> – Toast powitalny</li>
             <li><strong>17:00</strong> – Obiad</li>
             <li><strong>18:00</strong> – Życzenia i wspólne zdjęcia </li>
             <li><strong>19:00</strong> – Pierwszy taniec</li>
-            <li><strong>20:00</strong> – I Kolacja</li>
-            <li><strong>22:00</strong> – II Kolacja</li>
-            <li><strong>23:30</strong> – Zabawy </li>
-            <li><strong>00:00</strong> – Otrzepiny </li>
-            <li><strong>01:00</strong> – III Kolacja</li>
-            <li><strong>03:00</strong> – Impreza na całego</li>
+            <li><strong>20:30</strong> – I Ciepłe Danie</li>
+            <li><strong>22:00</strong> – II Ciepłe Danie</li>
+            <li><strong>00:00</strong> – Oczepiny </li>
+            <li><strong>01:00</strong> – III Ciepłe Danie</li>
+            <li><strong>03:30</strong> – IV Ciepłe Danie</li>
             <li><strong>05:00</strong> – Pożegnanie</li>
           </ul>
         </section>
@@ -121,7 +105,20 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&family=Qwitcher+Grypen&display=swap');
+
+.hero-title {
+  font-family: 'Qwitcher Grypen', cursive;
+  
+}
+
+@media (max-width: 768px) {
+  .hero-title span {
+    display: block;
+    line-height: 1;
+  }
+}
+
 .home-container1 {
   width: 100%;
   display: block;
@@ -277,9 +274,9 @@ export default {
 
 /* Wedding invitation style for timeline */
 #timeline-section h2 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Qwitcher Grypen', cursive;
   font-weight: 400;
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(4rem, 6vw, 5rem);
   color: #2b3a3b;
   text-align: center;
   margin: 0 0 0.75rem;
@@ -291,6 +288,11 @@ export default {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: start;
+  border: none;
+}
+
+.locations-row .scrollable {
+  border: none;
 }
 
 .locations-row .showcase-section {
@@ -332,10 +334,29 @@ export default {
 #timeline-section li strong {
   font-weight: 600;
   color: #0f2a2e;
-  background: #f2fbfd; /* subtle but still white-ish chip */
+  background: #f5ead8; /* neutral color matching the site palette */
   border-radius: 8px;
   padding: 0.2rem 0.5rem;
   min-width: 74px;
   text-align: center;
+}
+</style>
+
+<style scoped>
+/* Ensure Location component uses a straight font, not cursive */
+.locations-row .showcase-section h2,
+.locations-row .showcase-section [class^="location"],
+.locations-row .showcase-section {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* Ensure Location description uses the same font as timeline li */
+.locations-row .showcase-section [class*="description"],
+.locations-row .showcase-section .location-description,
+.locations-row .showcase-section .description {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  color: #1a1a1a;
+  line-height: 1.5;
 }
 </style>

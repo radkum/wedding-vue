@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="140" height="140">
+  <defs>
+    <!-- Gold gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff3b0"/>
+      <stop offset="40%" stop-color="#ffd700"/>
+      <stop offset="70%" stop-color="#e6b800"/>
+      <stop offset="100%" stop-color="#b88900"/>
+    </linearGradient>
+
+    <!-- Inner shadow -->
+    <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.15"/>
+    </radialGradient>
+
+    <!-- Diamond gradient -->
+    <linearGradient id="diamond" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dff6ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ring band -->
+  <circle cx="128" cy="150" r="70" fill="none" stroke="url(#gold)" stroke-width="24"/>
+
+  <!-- Inner glow for depth -->
+  <circle cx="128" cy="150" r="58" fill="none" stroke="url(#innerGlow)" stroke-width="6"/>
+
+  <!-- Diamond -->
+  <polygon 
+    points="128,30 150,55 128,80 106,55"
+    fill="url(#diamond)" 
+    stroke="#cfd8dc" 
+    stroke-width="2"/>
+
+  <!-- Diamond shine -->
+  <line x1="128" y1="35" x2="128" y2="75" stroke="#ffffff" stroke-width="2" opacity="0.7"/>
+  <line x1="112" y1="55" x2="144" y2="55" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+
+  <!-- Highlight on ring -->
+  <ellipse cx="95" cy="110" rx="18" ry="8" fill="#ffffff" opacity="0.35"/>
+</svg>
