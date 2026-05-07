@@ -1426,6 +1426,9 @@
 }
  
 .hero-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: var(--spacing-xl);
 }
  
@@ -1465,6 +1468,15 @@
   font-weight: var(--font-weight-medium);
   border-radius: var(--border-radius-full);
   backdrop-filter: blur(16px);
+}
+
+.hero-flowers {
+  margin-top: var(--spacing-2xl);
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
  
 .hero-nav-link {
