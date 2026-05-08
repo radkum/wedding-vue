@@ -27,7 +27,7 @@
         </div>
         <div class="hero-date">
           <span class="hero-date-text">30 Maj 2026</span>
-          <img src="/kwiaty_2.png" alt="Kwiaty" class="hero-flowers" />
+          <img src="/kwiaty.png" alt="Kwiaty" class="hero-flowers" />
         </div>
         <p class="hero-message section-content">
         </p>
