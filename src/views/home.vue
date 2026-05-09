@@ -61,7 +61,7 @@
             <li><strong>19:00</strong> – Pierwszy taniec</li>
             <li><strong>20:30</strong> – I Ciepłe Danie</li>
             <li><strong>22:00</strong> – II Ciepłe Danie</li>
-            <li><strong>00:00</strong> – Oczepiny </li>
+            <li><strong>00:00</strong> – Zabawy weselne </li>
             <li><strong>01:00</strong> – III Ciepłe Danie</li>
             <li><strong>03:30</strong> – IV Ciepłe Danie</li>
             <li><strong>05:00</strong> – Pożegnanie</li>
