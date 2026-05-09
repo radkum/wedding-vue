@@ -1471,9 +1471,9 @@
 }
 
 .hero-flowers {
-  margin-top: var(--spacing-2xl);
+  margin-top: 2rem;
   max-width: 100%;
-  width: 600px;
+  width: 150px;
   height: auto;
   display: block;
   object-fit: contain;
