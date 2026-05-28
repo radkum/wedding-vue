@@ -59,11 +59,11 @@
             <li><strong>17:00</strong> – Obiad</li>
             <li><strong>18:00</strong> – Życzenia i wspólne zdjęcia </li>
             <li><strong>19:00</strong> – Pierwszy taniec</li>
-            <li><strong>20:30</strong> – I Ciepłe Danie</li>
-            <li><strong>22:00</strong> – II Ciepłe Danie</li>
+            <li><strong>20:00</strong> – I Ciepłe Danie</li>
+            <li><strong>22:30</strong> – II Ciepłe Danie</li>
             <li><strong>00:00</strong> – Zabawy weselne </li>
             <li><strong>01:00</strong> – III Ciepłe Danie</li>
-            <li><strong>03:30</strong> – IV Ciepłe Danie</li>
+            <li><strong>03:00</strong> – IV Ciepłe Danie</li>
             <li><strong>05:00</strong> – Pożegnanie</li>
           </ul>
         </section>
